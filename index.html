@@ -324,7 +324,7 @@
 </div>
   <div class="kk-in-instruction">화면을 터치하면 다음 대사가 나옵니다</div>
 </div>
-<section id="phoneApp"  aria-label="전화 앱"><div class="phead"><button class="pglass" id="pLeft">편집</button><div class="ptitle" id="pTitle">통화</div><button class="pglass" id="pRight">☷</button></div><div class="pbody" id="pBody"></div><div class="pnav" id="pNav"><div class="pnavmain"><button data-tab="recent"><span class="navico">◷</span>통화</button><button data-tab="contacts"><span class="navico">◉</span>연락처</button><button data-tab="keypad"><span class="navico">⠿</span>키패드</button></div><button class="psearch" data-tab="search">⌕</button></div></section><div class="toast" id="toast"></div><div class="homebar" id="homebar"></div>
+<section id="phoneApp"  aria-label="전화 앱"><div class="phead"><button class="pglass" id="pLeft">편집</button><div class="ptitle" id="pTitle">통화</div><button class="pglass" id="pRight">☷</button></div><div class="pbody" id="pBody"></div><div class="pnav" id="pNav"><div class="pnavmain"><button data-tab="recent"><span class="navico">◷</span>통화</button><button data-tab="contacts"><span class="navico">◉</span>연락처</button><button data-tab="keypad"><span class="navico">⠿</span>키패드</button></div><button class="psearch" data-tab="search">⌕</button></div></section><div class="homebar" id="homebar"></div>
 </div>
 <script>
 const PIN='0831';let entered='',current='lock',toastTimer;
@@ -334,7 +334,7 @@ function updateDots(){$('dots').innerHTML=Array.from({length:4},(_,i)=>`<span cl
 function digit(n){if(entered.length>=4)return;entered+=n;updateDots();if(entered.length===4){setTimeout(()=>{if(entered===PIN){show('home')}else{$('error').textContent='암호가 올바르지 않습니다 · 힌트: 🍓';entered='';updateDots()}},200)}}
 function del(){entered=entered.slice(0,-1);updateDots()}
 const keys=['1','2','3','4','5','6','7','8','9','','0','⌫'];$('keypad').innerHTML=keys.map(k=>`<button class="key ${k==='⌫'?'small':''} ${!k?'empty':''}" data-key="${k}" ${!k?'disabled':''}>${k}</button>`).join('');$('keypad').addEventListener('click',e=>{let k=e.target.closest('button')?.dataset.key;if(k==='⌫')del();else if(/^\d$/.test(k))digit(k)});
-function toastMessage(message){const t=$('toast');t.textContent=message;t.style.display='block';clearTimeout(toastTimer);toastTimer=setTimeout(()=>t.style.display='none',2200)}
+function toastMessage(message){/* Disabled: no placeholder or unimplemented-feature messages. */}
 $('flashlightButton').addEventListener('click',e=>{e.stopPropagation()});
 $('cameraButton').addEventListener('click',e=>{e.stopPropagation()});
 $('lock').addEventListener('click',e=>{if(e.target.closest('.lockbottom'))return;show('pass')});let touchStart=0;$('lock').addEventListener('touchstart',e=>touchStart=e.touches[0].clientY,{passive:true});$('lock').addEventListener('touchend',e=>{if(touchStart-e.changedTouches[0].clientY>35)show('pass')},{passive:true});$('lockButton').onclick=()=>show('lock');$('homebar').onclick=()=>{if(current==='kakao'){if(kkFaceActive)endKakaoFaceTalk();else if(kkChatOpen)closeKakaoChat();else closeKakao();}else if(current==='photos'){closePhotos();}else if(current==='phone'){closePhone();}else if(current==='messages'){if(activeMessageThread!==null)closeMessageThread();else closeMessages();}else if(current==='home')show('lock');else if(current==='lock')show('pass');else show('lock')};
