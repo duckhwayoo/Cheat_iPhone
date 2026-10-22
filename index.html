@@ -25,6 +25,94 @@
 #phoneApp .phead{top:58px;height:51px;left:16px;right:16px}#phoneApp .pglass{border:1px solid #d5d5d9;border-radius:100px;background:linear-gradient(160deg,#fff,#f8f8f9);box-shadow:inset 0 1px 1px #fff,0 1px 2px #00000008;font-size:17px;min-width:52px;height:46px}#phoneApp .ptitle{font-size:21px;font-weight:750}#phoneApp .pbody{top:119px;bottom:94px}#phoneApp .pnav{bottom:20px;height:65px}#phoneApp .pnavmain{background:#ffffffb8;border:1px solid #d8d8dc;box-shadow:0 0 8px #00000008;backdrop-filter:blur(24px)}#phoneApp .pnavmain button.sel{background:#e6e6e9;color:#0088ff}#phoneApp .pnavmain .navico{height:27px;display:grid;place-items:center}#phoneApp .pnavmain .navico svg{width:25px;height:25px}#phoneApp .psearch{background:#ffffffb8;backdrop-filter:blur(22px)}#phoneApp .psearch svg{width:27px;height:27px}#phoneApp .prow{min-height:73px}#phoneApp .prow:not(.pcontactrow){cursor:default}#phoneApp .prow[data-inert="true"],#phoneApp .pcontactrow[data-inert="true"]{cursor:default}#phoneApp .pcontactrow[data-inert="true"]:active{background:#fff}#phoneApp .pdetail{min-height:100%;padding:22px 17px 110px;background:linear-gradient(160deg,#a3b6d1 0%,#7888b3 34%,#575e9d 69%,#47438d 100%)}#phoneApp .pdetail .avatar{width:155px;height:155px;margin:38px auto 12px;background:linear-gradient(150deg,#9fb9d8,#7484b1);border:2px solid #ffffff75;box-shadow:inset 0 1px 10px #ffffff40,0 2px 6px #00000013}#phoneApp .pdetail h2{font-size:29px;margin:0 0 16px}#phoneApp .pdetail .back{background:#ffffff15;border:1px solid #ffffff80}#phoneApp .pactions{gap:10px;margin:20px 0}#phoneApp .pactions button{display:grid;place-items:center;height:62px;width:62px;border:1px solid #ffffff6e;background:#ffffff1d;box-shadow:inset 0 1px 3px #ffffff20}#phoneApp .pactions svg{width:29px;height:29px;fill:#fff}#phoneApp .pactions button:disabled{opacity:.45;cursor:default}#phoneApp .pdetailcard{background:#6973c4a6;padding:15px 16px;border-radius:24px;margin:9px 0}#phoneApp .pdetailcard span{font-size:19px}#phoneApp .pdetailcard .callnumber{color:#fff;text-decoration:none;background:none;border:0;padding:0;font:inherit;text-align:left}#phoneApp .pdetailcard .callnumber:hover{text-decoration:underline}#phoneApp .pdetail .heartavatar{font-size:75px;font-weight:600;color:#fff}#phoneApp .pincall{inset:0;background:linear-gradient(165deg,#8798b2 0%,#5b6c94 48%,#303959 100%);padding:0;display:flex;align-items:center;flex-direction:column}#phoneApp .pincall .calltop{margin-top:clamp(110px,20vh,165px);text-align:center}#phoneApp .pincall .avatar{width:112px;height:112px;margin:0 auto 24px;background:#ffffff28;border:1px solid #ffffff75;font-size:52px}#phoneApp .pincall h2{font-size:32px;margin:0 0 7px}#phoneApp .pincall .callstate{font-size:17px;color:#f2f2f5;margin:0}#phoneApp .pincall .calltools{position:absolute;bottom:175px;left:0;right:0;display:grid;grid-template-columns:repeat(3,1fr);gap:24px;padding:0 45px}#phoneApp .pincall .calltool{display:flex;align-items:center;flex-direction:column;gap:8px;font-size:12px}#phoneApp .pincall .calltool span{height:57px;width:57px;border-radius:50%;background:#ffffff28;display:grid;place-items:center;font-size:23px}#phoneApp .pincall .end{bottom:66px;height:72px;width:72px;background:#f13d46;display:grid;place-items:center;box-shadow:0 4px 14px #0002}#phoneApp .pincall .end svg{height:32px;width:32px;transform:rotate(135deg)}#phoneApp .subtitle{position:absolute;bottom:275px;left:16px;right:16px;text-align:center;min-height:44px;display:flex;align-items:center;justify-content:center;pointer-events:none}#phoneApp .subtitle span{display:inline-block;max-width:100%;padding:9px 14px;background:#0009;color:#fff;border-radius:10px;font-size:16px;line-height:1.5;box-shadow:0 2px 10px #0002}#phoneApp .taphelp{position:absolute;bottom:255px;font-size:12px;opacity:.8}#phoneApp .pincall .phead{display:none}#phoneApp .pkeyscreen{padding-bottom:8px}#phoneApp .pkeys{gap:13px 24px}#phoneApp .pkey{box-shadow:inset 0 2px 5px #00000006;background:linear-gradient(155deg,#fff,#fdfdfd)}#phoneApp .pdetail .back svg{height:23px;width:23px}#phoneApp .callarrow{font-size:18px;color:#8e8e93;margin-right:3px}#phoneApp .pcallbtn{display:grid;place-items:center}#phoneApp .pcallbtn svg{width:22px;height:22px;fill:#0787f7}#phoneApp .pcallbtn:disabled{opacity:.45}#phoneApp .pcontactrow:disabled{opacity:1;color:inherit}#phoneApp .pnavmain button svg{stroke:currentColor}#phoneApp .pincall .subtitle{z-index:5}
 @media(max-height:740px){#phoneApp .pincall .calltop{margin-top:100px}#phoneApp .pincall .calltools{bottom:145px}#phoneApp .subtitle{bottom:237px}#phoneApp .pincall .end{bottom:48px}}
 </style>
+
+<style id="v8-call-fix">
+/* Full-bleed iOS-style call view; do not inherit scrolling list bounds */
+#phoneApp .pbody:has(.pincall){top:0!important;bottom:0!important;overflow:hidden!important;z-index:3}
+#phoneApp .pincall{position:absolute!important;inset:0!important;width:100%;height:100%;overflow:hidden;color:#fff;background:radial-gradient(ellipse at 48% 90%,#56601f 0%,#494d21 37%,transparent 78%),linear-gradient(155deg,#5c493c 0%,#514b39 40%,#404b26 100%);display:block!important;touch-action:manipulation}
+#phoneApp .pincall .calltop{position:absolute;top:clamp(105px,15%,155px);left:12px;right:12px;margin:0!important;text-align:center}
+#phoneApp .pincall .calltop .avatar{display:none!important}
+#phoneApp .pincall .calltop h2{font-size:clamp(32px,9vw,38px);font-weight:650;line-height:1.2;margin:0!important;letter-spacing:-1.1px;color:white}
+#phoneApp .pincall .callstate{font-size:19px;line-height:1.3;font-weight:500;color:#e5e3d8b8;margin:0 0 7px!important;transition:opacity .3s ease}
+#phoneApp .pincall .callstate.switching{opacity:0}
+#phoneApp .pincall .calltools{position:absolute;bottom:clamp(72px,10%,110px)!important;left:0;right:0;display:grid!important;grid-template-columns:repeat(3,minmax(0,1fr));gap:24px 15px!important;padding:0 24px!important;max-width:420px;margin:auto}
+#phoneApp .pincall .calltool{font-size:15px!important;gap:8px!important;line-height:1.2;color:#fff;text-align:center;user-select:none}
+#phoneApp .pincall .calltool span{width:clamp(65px,20vw,76px)!important;height:clamp(65px,20vw,76px)!important;border-radius:50%;border:1px solid #ffffff38;background:#ffffff27;backdrop-filter:blur(18px);-webkit-backdrop-filter:blur(18px);display:grid;place-items:center;box-shadow:inset 0 1px 1px #ffffff30}
+#phoneApp .pincall .calltool span svg{width:34px;height:34px;stroke:white;fill:none;stroke-width:2.4;stroke-linecap:round;stroke-linejoin:round}
+#phoneApp .pincall .calltool.muted span{background:#ffffff66}
+#phoneApp .pincall .calltool .endcall{background:#f20d14!important;border-color:#f35b5e!important}
+#phoneApp .pincall .calltool .endcall svg{width:38px;height:38px;fill:white;stroke:white}
+#phoneApp .pincall .calltool button{border:0;background:none;color:inherit;font:inherit;padding:0;display:flex;flex-direction:column;align-items:center;gap:8px}
+#phoneApp .pincall .end{display:none!important}
+#phoneApp .pincall .subtitle{position:absolute;top:clamp(235px,31%,320px)!important;bottom:auto!important;left:24px;right:24px;min-height:70px;display:flex;align-items:center;justify-content:center;pointer-events:none;z-index:5}
+#phoneApp .pincall .subtitle span{background:none!important;box-shadow:none!important;padding:0!important;border:0!important;border-radius:0!important;color:white;font-size:clamp(17px,4.7vw,21px);font-weight:550;line-height:1.55;letter-spacing:-.3px;text-align:center;text-shadow:0 1px 6px #0007;max-width:340px;opacity:0;transform:translateY(9px);transition:opacity .45s ease,transform .45s ease}
+#phoneApp .pincall .subtitle span.visible{opacity:1;transform:translateY(0)}
+#phoneApp .pincall .taphelp{display:none!important}
+#phoneApp .pincall.ending .calltools{pointer-events:none;opacity:.4;transition:opacity .25s}
+@media(max-height:690px){#phoneApp .pincall .calltools{bottom:48px!important;gap:13px!important}#phoneApp .pincall .calltool span{width:61px!important;height:61px!important}#phoneApp .pincall .calltop{top:105px}}
+</style>
+
+<style id="v9-call-polish">
+/* More restrained typography, matching the reference iPhone call screen. */
+#phoneApp .pincall .calltop h2 {
+  font-size: clamp(27px, 7.5vw, 32px) !important;
+  font-weight: 570 !important;
+  letter-spacing: -0.7px !important;
+}
+#phoneApp .pincall .callstate {
+  font-size: 16px !important;
+  font-weight: 400 !important;
+}
+#phoneApp .pincall .calltools {
+  gap: 21px 12px !important;
+  padding: 0 29px !important;
+}
+#phoneApp .pincall .calltool {
+  font-size: 13px !important;
+  font-weight: 400 !important;
+  gap: 7px !important;
+}
+#phoneApp .pincall .calltool span {
+  width: clamp(57px, 17vw, 67px) !important;
+  height: clamp(57px, 17vw, 67px) !important;
+}
+#phoneApp .pincall .calltool span svg {
+  width: 28px !important;
+  height: 28px !important;
+  stroke-width: 2.1 !important;
+}
+#phoneApp .pincall .calltool .endcall svg {
+  width: 32px !important;
+  height: 32px !important;
+}
+#phoneApp .pincall .subtitle {
+  top: clamp(228px, 30%, 305px) !important;
+  left: 24px !important;
+  right: 24px !important;
+}
+#phoneApp .pincall .subtitle span {
+  font-size: clamp(15px, 4.1vw, 17px) !important;
+  font-weight: 430 !important;
+  line-height: 1.65 !important;
+  letter-spacing: -0.35px !important;
+  max-width: 100% !important;
+  text-wrap: balance;
+  overflow-wrap: break-word;
+  word-break: keep-all;
+  white-space: normal;
+}
+#phoneApp .pincall .subtitle span .lyric-line {
+  display:block;
+  opacity:1 !important;
+  transform:none !important;
+  transition:none !important;
+  font:inherit;
+}
+@media (max-height:690px) {
+  #phoneApp .pincall .calltool span {width:56px!important;height:56px!important}
+}
+</style>
+
 </head>
 <body>
 <div class="phone">
@@ -95,26 +183,41 @@ let callLog=[
 [SENIOR,'토요일','out',false],['스매쉬 인사과장님','금요일','in',true],[SENIOR,'금요일','out',false]
 ];
 const escapeHTML=t=>String(t).replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
-let callConnectTimer=null,callTicker=null,callStartedAt=0,callConnected=false,lineIndex=-1;
-function clearCallTimers(){clearTimeout(callConnectTimer);clearInterval(callTicker);callConnectTimer=null;callTicker=null;}
+let callConnectTimer=null,callTicker=null,callStartedAt=0,callConnected=false,lineIndex=-1,callEnding=false,subtitleTimer=null,finishTimer=null;
+function clearCallTimers(){clearTimeout(callConnectTimer);clearInterval(callTicker);clearTimeout(subtitleTimer);clearTimeout(finishTimer);callConnectTimer=null;callTicker=null;subtitleTimer=null;finishTimer=null;}
 function setPhoneStatus(){const status=document.querySelector('.status');status.classList.toggle('inphone',true);status.style.color=callName?'#fff':'#000';status.querySelector('.status-right')?.style.setProperty('filter',callName?'brightness(0) invert(1)':'brightness(0)');}
 function openPhone(){show('home');current='phone';$('phoneApp').classList.add('active');$('homebar').style.background='#111';$('homebar').style.zIndex='12';document.querySelector('.status').classList.add('inphone');document.querySelector('.island').classList.add('inphone');renderPhone()}
 function closePhone(){clearCallTimers();$('phoneApp').classList.remove('active');$('homebar').style.background='white';$('homebar').style.zIndex='8';const status=document.querySelector('.status');status.classList.remove('inphone');status.style.color='';status.querySelector('.status-right')?.style.removeProperty('filter');document.querySelector('.island').classList.remove('inphone');current='home';callName=null;detailName=null;callConnected=false;}
 function tabPhone(tab){if(callName)return;phoneTab=tab;detailName=null;renderPhone()}
 function avatarFor(name){return `<div class="avatar ${name===SENIOR?'heartavatar':''}">${name===SENIOR?'♥':escapeHTML(name.slice(0,1))}</div>`}
 function renderPhone(){let body=$('pBody'),head=$('pTitle');$('pNav').style.display=detailName||callName?'none':'flex';$('pLeft').style.visibility=phoneTab==='keypad'&&!detailName&&!callName?'hidden':'visible';$('pRight').style.visibility=phoneTab==='keypad'&&!detailName&&!callName?'hidden':'visible';document.querySelectorAll('#pNav [data-tab]').forEach(b=>b.classList.toggle('sel',b.dataset.tab===phoneTab));setPhoneStatus();
-if(callName){head.textContent='';$('pLeft').style.visibility='hidden';$('pRight').style.visibility='hidden';body.innerHTML=`<div class="pincall" id="activeCall"><div class="calltop">${avatarFor(SENIOR)}<h2>♥선배님♥</h2><p class="callstate" id="callState">휴대전화 연결 중…</p></div><div class="subtitle" id="callSubtitle"></div><div class="taphelp" id="callHint" style="display:none">화면을 탭하면 다음 대사가 나와요</div><div class="calltools"><div class="calltool"><span>♩</span>음소거</div><div class="calltool"><span>${svgIcon('keypad')}</span>키패드</div><div class="calltool"><span>${svgIcon('contact')}</span>스피커</div></div><button class="end" data-action="end" aria-label="통화 종료">${svgIcon('phone')}</button></div>`;return}
+if(callName){head.textContent='';$('pLeft').style.visibility='hidden';$('pRight').style.visibility='hidden';body.innerHTML=`<div class="pincall" id="activeCall"><div class="calltop"><p class="callstate" id="callState">휴대전화 연결 중…</p><h2>♥선배님♥</h2></div><div class="subtitle" id="callSubtitle" aria-live="polite"></div><div class="calltools">
+<div class="calltool"><button data-action="mute" aria-label="소리 끔"><span><svg viewBox="0 0 32 32"><path d="M16 5a4 4 0 0 0-4 4v8a4 4 0 0 0 8 0V9a4 4 0 0 0-4-4Z"/><path d="M8 15v2a8 8 0 0 0 16 0v-2M16 25v4m-5 0h10"/><path d="M5 5l22 22"/></svg></span>소리 끔</button></div>
+<div class="calltool"><span style="opacity:.48"><svg viewBox="0 0 32 32"><rect x="4" y="6" width="21" height="20" rx="4"/><path d="m25 12 5-3v14l-5-3"/><path d="M11 14q0-3 4-3t4 3q0 2-4 4v2m0 3v1"/></svg></span>FaceTime</div>
+<div class="calltool"><button data-action="mute" aria-label="음소거"><span><svg viewBox="0 0 32 32"><rect x="12" y="4" width="8" height="16" rx="4"/><path d="M7 15v2a9 9 0 0 0 18 0v-2M16 26v4m-5 0h10M4 4l24 24"/></svg></span>소리 끔</button></div>
+<div class="calltool"><span><svg viewBox="0 0 32 32" fill="white" stroke="none"><circle cx="8" cy="16" r="2.7"/><circle cx="16" cy="16" r="2.7"/><circle cx="24" cy="16" r="2.7"/></svg></span>더 보기</div>
+<div class="calltool"><button data-action="end" aria-label="통화 종료"><span class="endcall"><svg viewBox="0 0 32 32"><path d="M4 14q12-9 24 0l-2 6-6-2v-4q-4-2-8 0v4l-6 2Z" stroke="none"/></svg></span>종료</button></div>
+<div class="calltool"><span><svg viewBox="0 0 32 32" fill="white" stroke="none">${Array.from({length:9},(_,i)=>`<circle cx="${9+(i%3)*7}" cy="${9+Math.floor(i/3)*7}" r="2.5"/>`).join('')}</svg></span>키패드</div>
+</div></div>`;return}
 if(detailName){head.textContent='연락처';$('pLeft').textContent='‹';$('pRight').textContent='편집';body.innerHTML=`<div class="pdetail"><button class="back" data-action="back" aria-label="뒤로">${svgIcon('back')}</button>${avatarFor(SENIOR)}<h2>♥선배님♥</h2><div class="pactions"><button disabled title="메시지">${svgIcon('message')}</button><button data-action="call" data-name="${SENIOR}" title="전화">${svgIcon('phone')}</button><button disabled title="FaceTime">${svgIcon('video')}</button><button disabled title="메일">${svgIcon('mail')}</button></div><div class="pdetailcard"><b>휴대전화</b><span><button class="callnumber" data-action="call" data-name="${SENIOR}">010-xxxx-0831</button></span></div><div class="pdetailcard"><b>메모</b><span>즐겨찾기</span></div></div>`;return}
 $('pLeft').textContent='편집';$('pRight').textContent=phoneTab==='contacts'?'+':'☷';head.textContent={recent:'통화',contacts:'연락처',keypad:'',search:'검색'}[phoneTab];
 if(phoneTab==='recent'){body.innerHTML=callLog.map(([name,when,direction,unanswered])=>`<div class="prow" ${name!==SENIOR?'data-inert="true"':''}>${avatarFor(name)}<div class="pinfo" ${name===SENIOR?`data-action="call" data-name="${SENIOR}" role="button" tabindex="0"`:''}><div class="pname ${direction==='in'&&unanswered?'pmissed':''}">${escapeHTML(name)}</div><div class="psub"><span class="callarrow">${direction==='out'?'↗':'↙'}</span>${unanswered?(direction==='out'?'응답 없음':'부재중 전화'):'전화번호'}</div></div><div class="ptime">${escapeHTML(when)}</div><button class="pcallbtn" ${name===SENIOR?`data-action="call" data-name="${SENIOR}"`:'disabled'} aria-label="${escapeHTML(name)} 전화">${svgIcon('phone')}</button></div>`).join('');return}
 if(phoneTab==='contacts'||phoneTab==='search'){let contacts=contactData.filter(c=>phoneTab!=='search'||c[0].toLowerCase().includes(searchTerm.toLowerCase()));body.innerHTML=(phoneTab==='search'?`<input class="psearchinput" id="pSearchInput" placeholder="연락처 검색" value="${escapeHTML(searchTerm)}"/>`:'')+contacts.map((c,i)=>`${c[0]===SENIOR&&phoneTab==='contacts'?'<div class="psection">★ 즐겨찾기</div>':''}<button class="prow pcontactrow" ${c[0]===SENIOR?`data-action="detail" data-name="${SENIOR}"`:'data-inert="true"'}>${avatarFor(c[0])}<div class="pinfo"><div class="pname">${escapeHTML(c[0])}</div><div class="psub">${escapeHTML(c[1])}</div></div>${c[0]===SENIOR?'<span class="pstar">★</span>':''}</button>`).join('');if(phoneTab==='search'){$('pSearchInput').addEventListener('input',e=>{searchTerm=e.target.value;let cursor=e.target.selectionStart;renderPhone();$('pSearchInput').focus();$('pSearchInput').setSelectionRange(cursor,cursor)})}return}
 const chars=['','ABC','DEF','GHI','JKL','MNO','PQRS','TUV','WXYZ','','+',''];const digits=['1','2','3','4','5','6','7','8','9','*','0','#'];body.innerHTML=`<div class="pkeyscreen"><div class="pnumber">${escapeHTML(dialNumber)||'&nbsp;'}</div><div class="pkeys">${digits.map((d,i)=>`<button class="pkey" data-action="digit" data-digit="${d}">${d}<small>${chars[i]||'&nbsp;'}</small></button>`).join('')}</div><div style="position:relative;width:100%;text-align:center"><button class="pcallgreen" data-action="dial" aria-label="전화 걸기">${svgIcon('phone')}</button><button class="pdelete" data-action="delete" aria-label="삭제">⌫</button></div></div>`;
 }
-function startVirtualCall(name){if(name!==SENIOR)return;clearCallTimers();callName=SENIOR;callConnected=false;lineIndex=-1;callLog.unshift([SENIOR,'방금','out',false]);renderPhone();callConnectTimer=setTimeout(()=>{if(callName!==SENIOR)return;callConnected=true;callStartedAt=Date.now();const state=$('callState');if(state)state.textContent='00:00';const hint=$('callHint');if(hint)hint.style.display='block';callTicker=setInterval(()=>{if(!callName)return;let secs=Math.floor((Date.now()-callStartedAt)/1000);let label=String(Math.floor(secs/60)).padStart(2,'0')+':'+String(secs%60).padStart(2,'0');if($('callState'))$('callState').textContent=label},250)},3000)}
-function endVirtualCall(){clearCallTimers();callName=null;callConnected=false;detailName=null;phoneTab='recent';renderPhone()}
+function startVirtualCall(name){if(name!==SENIOR)return;clearCallTimers();callName=SENIOR;callConnected=false;callEnding=false;lineIndex=-1;callLog.unshift([SENIOR,'방금','out',false]);renderPhone();callConnectTimer=setTimeout(()=>{if(callName!==SENIOR)return;callConnected=true;callStartedAt=Date.now();const state=$('callState');if(state){state.classList.add('switching');setTimeout(()=>{if(callName===SENIOR){state.textContent='00:00';state.classList.remove('switching')}},270)}const hint=$('callHint');if(hint)hint.style.display='block';callTicker=setInterval(()=>{if(!callName)return;let secs=Math.floor((Date.now()-callStartedAt)/1000);let label=String(Math.floor(secs/60)).padStart(2,'0')+':'+String(secs%60).padStart(2,'0');if($('callState'))$('callState').textContent=label},250)},3000)}
+function showCallLine(){if(callEnding||!callConnected)return;if(lineIndex>=lines.length-1){endVirtualCall();return}lineIndex++;clearTimeout(subtitleTimer);const area=$('callSubtitle');if(!area)return;const old=area.querySelector('span');if(old)old.classList.remove('visible');subtitleTimer=setTimeout(()=>{if(!callName||callEnding)return;const line=lines[lineIndex];
+const cinematicBreaks={
+'근무 시간에 이딴 용건으로 전화 걸지 말게.':'근무 시간에 이딴 용건으로\\n전화 걸지 말게.',
+'자네가 오늘 하루 딸기칩 타령 없이 근무를 잘 마무리한다면 말이야.':'자네가 오늘 하루 딸기칩 타령 없이\\n근무를 잘 마무리한다면 말이야.',
+'수호대 매점 딸기칩이 품절됐다고?':'수호대 매점 딸기칩이\\n품절됐다고?'
+};
+const displayed=cinematicBreaks[line]||line;
+area.innerHTML=`<span>${displayed.split('\\n').map(part=>`<span class="lyric-line">${escapeHTML(part)}</span>`).join('')}</span>`;requestAnimationFrame(()=>requestAnimationFrame(()=>area.querySelector('span')?.classList.add('visible')))},old?260:10)}
+function endVirtualCall(){if(callEnding||!callName)return;callEnding=true;clearCallTimers();const area=$('callSubtitle');if(area)area.querySelector('span')?.classList.remove('visible');const state=$('callState');if(state){state.classList.add('switching');setTimeout(()=>{if(!callName)return;state.textContent='통화 종료';state.classList.remove('switching')},220)}$('activeCall')?.classList.add('ending');finishTimer=setTimeout(()=>{callName=null;callConnected=false;callEnding=false;detailName=null;phoneTab='recent';renderPhone()},1250)}
 $('pNav').innerHTML=`<div class="pnavmain"><button data-tab="recent"><span class="navico">${svgIcon('clock')}</span>통화</button><button data-tab="contacts"><span class="navico">${svgIcon('contact')}</span>연락처</button><button data-tab="keypad"><span class="navico">${svgIcon('keypad')}</span>키패드</button></div><button class="psearch" data-tab="search" aria-label="검색">${svgIcon('search')}</button>`;
 $('pNav').addEventListener('click',e=>{let t=e.target.closest('[data-tab]');if(t)tabPhone(t.dataset.tab)});
-$('pBody').addEventListener('click',e=>{const b=e.target.closest('[data-action]');if(callName){if(b?.dataset.action==='end'){e.stopPropagation();endVirtualCall();return}if(!callConnected)return;if(lineIndex<lines.length-1){lineIndex++;$('callSubtitle').innerHTML=`<span>${escapeHTML(lines[lineIndex])}</span>`;if($('callHint'))$('callHint').style.display='none'}else endVirtualCall();return}if(!b)return;let action=b.dataset.action,name=b.dataset.name;if(action==='detail'){if(name===SENIOR){detailName=name;renderPhone()}}else if(action==='call'){startVirtualCall(name)}else if(action==='back'){detailName=null;renderPhone()}else if(action==='digit'){if(dialNumber.length<22)dialNumber+=b.dataset.digit;renderPhone()}else if(action==='delete'){dialNumber=dialNumber.slice(0,-1);renderPhone()}else if(action==='dial'){/* Other numbers intentionally do nothing. */}});
+$('pBody').addEventListener('click',e=>{const b=e.target.closest('[data-action]');if(callName){if(b?.dataset.action==='end'){e.stopPropagation();endVirtualCall();return}if(b?.dataset.action==='mute'){e.stopPropagation();b.closest('.calltool')?.classList.toggle('muted');return}showCallLine();return}if(!b)return;let action=b.dataset.action,name=b.dataset.name;if(action==='detail'){if(name===SENIOR){detailName=name;renderPhone()}}else if(action==='call'){startVirtualCall(name)}else if(action==='back'){detailName=null;renderPhone()}else if(action==='digit'){if(dialNumber.length<22)dialNumber+=b.dataset.digit;renderPhone()}else if(action==='delete'){dialNumber=dialNumber.slice(0,-1);renderPhone()}else if(action==='dial'){/* Other numbers intentionally do nothing. */}});
 $('pBody').addEventListener('keydown',e=>{if(e.key==='Enter'&&e.target.dataset.action==='call'&&e.target.dataset.name===SENIOR)startVirtualCall(SENIOR)});
 $('pLeft').onclick=()=>{if(detailName){detailName=null;renderPhone()}};
 $('pRight').onclick=()=>{};
