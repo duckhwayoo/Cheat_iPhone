@@ -184,7 +184,70 @@
 #photosApp .ph-tab{flex:1;min-width:0;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:2px;height:51px;border:0;background:none;border-radius:29px;font-size:11px;color:#151515;font-weight:500;padding:0 7px}#photosApp .ph-tab.selected{background:#e9e9ec;color:#0084ff}#photosApp .ph-tab svg{height:23px;width:25px;fill:none;stroke:currentColor;stroke-width:2.3;stroke-linecap:round;stroke-linejoin:round}
 #photosApp .ph-search{pointer-events:auto;width:59px;height:59px;border:1px solid #dadade;border-radius:50%;background:#fffffff0;display:grid;place-items:center}#photosApp .ph-search svg{width:27px;height:27px;stroke:#111;stroke-width:2.6;fill:none}
 @media(max-width:360px){#photosApp .ph-hero h1{font-size:31px}#photosApp .ph-count{font-size:14px}#photosApp .ph-actions{gap:6px}}
-</style></head>
+</style><style id="v14-kakao-css">
+#kakaoApp{position:absolute;inset:0;z-index:7;display:none;color:#161616;background:#fff;font-family:-apple-system,BlinkMacSystemFont,'Apple SD Gothic Neo',sans-serif;overflow:hidden}#kakaoApp.active{display:block}
+#kakaoApp button{font:inherit;border:0;cursor:pointer;color:inherit;background:transparent}#kakaoApp .kk-inbox{position:absolute;inset:0;background:#fff}#kakaoApp .kk-titlebar{position:absolute;top:65px;left:17px;right:17px;height:48px;display:flex;align-items:center;justify-content:space-between}#kakaoApp .kk-title{font-size:25px;font-weight:740;letter-spacing:-.8px}#kakaoApp .kk-icons{display:flex;gap:19px;align-items:center}#kakaoApp .kk-icons svg{width:23px;height:23px;stroke:#151515;stroke-width:2.2;fill:none;stroke-linecap:round;stroke-linejoin:round}
+#kakaoApp .kk-chips{position:absolute;top:124px;left:17px;right:12px;display:flex;gap:6px;overflow:hidden;white-space:nowrap}#kakaoApp .kk-chip{padding:10px 15px;border-radius:25px;background:#f2f2f2;font-size:14px;font-weight:650;white-space:nowrap}#kakaoApp .kk-chip.active{background:#191919;color:#fff}#kakaoApp .kk-inbox-list{position:absolute;top:186px;left:0;right:0;bottom:70px;overflow:auto}#kakaoApp .kk-row{width:100%;display:flex;align-items:center;gap:12px;padding:12px 18px;text-align:left;min-height:80px}#kakaoApp .kk-profile{width:53px;height:53px;border-radius:19px;background:#9cd0f6;display:grid;place-items:center;flex:none}#kakaoApp .kk-profile svg{width:38px;height:38px}#kakaoApp .kk-row-main{flex:1;min-width:0}#kakaoApp .kk-row-top{display:flex;align-items:center;gap:6px}#kakaoApp .kk-row-name{font-size:17px;font-weight:660;overflow:hidden;text-overflow:ellipsis;white-space:nowrap}#kakaoApp .kk-pin{font-size:13px;color:#929292;transform:rotate(35deg)}#kakaoApp .kk-preview{font-size:14px;color:#969696;margin-top:6px;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}#kakaoApp .kk-row-time{font-size:11px;color:#989898;align-self:flex-start;margin-top:5px}#kakaoApp .kk-tabbar{position:absolute;bottom:0;left:0;right:0;height:69px;background:#fff;border-top:1px solid #f0f0f0;display:flex;align-items:center;justify-content:space-around;padding:0 5px 13px}#kakaoApp .kk-tabbar button{display:flex;align-items:center;justify-content:center;min-width:45px;color:#bababa}#kakaoApp .kk-tabbar button.selected{color:#242424}#kakaoApp .kk-tabbar svg{width:26px;height:26px;fill:currentColor}
+#kakaoApp .kk-chat{display:none;position:absolute;inset:0;background:#abc3d3}#kakaoApp .kk-chat.open{display:block}#kakaoApp .kk-chathead{position:absolute;top:42px;left:0;right:0;height:70px;display:flex;align-items:center;justify-content:space-between;padding:0 14px;z-index:2;background:#abc3d3ec;backdrop-filter:blur(14px);-webkit-backdrop-filter:blur(14px)}#kakaoApp .kk-back{height:45px;min-width:66px;border-radius:24px!important;background:#ffffff3c!important;border:1px solid #ffffff99!important;display:flex;align-items:center;gap:7px;justify-content:center;font-size:18px!important}#kakaoApp .kk-back svg{height:24px;width:20px;fill:none;stroke:#151515;stroke-width:3}#kakaoApp .kk-chatname{font-size:18px;font-weight:730;letter-spacing:-.4px;max-width:45%;overflow:hidden;text-overflow:ellipsis;white-space:nowrap}#kakaoApp .kk-chattools{display:flex;gap:7px;background:#ffffff3b;border:1px solid #ffffff80;border-radius:27px;padding:9px 11px}#kakaoApp .kk-chattools button{width:24px;height:23px;padding:0}#kakaoApp .kk-chattools svg{width:23px;height:23px;fill:none;stroke:#181818;stroke-width:2.3;stroke-linecap:round;stroke-linejoin:round}
+#kakaoApp .kk-chat-scroll{position:absolute;top:111px;bottom:78px;left:0;right:0;overflow:auto;padding:8px 11px 18px;overscroll-behavior:contain;scrollbar-width:thin}#kakaoApp .kk-day{margin:18px auto 15px;background:#91b0c3a3;border-radius:18px;padding:6px 12px;width:max-content;max-width:95%;font-size:12px;color:#24323b;text-align:center}#kakaoApp .kk-msg{display:flex;gap:7px;margin:6px 0;align-items:flex-start}#kakaoApp .kk-msg.out{justify-content:flex-end}#kakaoApp .kk-msg.in{justify-content:flex-start}#kakaoApp .kk-miniavatar{height:35px;width:35px;border-radius:13px;background:#96cdf7;display:grid;place-items:center;flex:none}#kakaoApp .kk-miniavatar svg{height:28px;width:28px}#kakaoApp .kk-msg-body{max-width:75%;min-width:0}#kakaoApp .kk-sender{font-size:12px;color:#354650;margin-bottom:5px}#kakaoApp .kk-bubbleline{display:flex;align-items:flex-end;gap:5px}#kakaoApp .kk-msg.out .kk-bubbleline{flex-direction:row-reverse}#kakaoApp .kk-bubble{font-size:15px;line-height:1.36;letter-spacing:-.3px;white-space:pre-wrap;overflow-wrap:break-word;word-break:keep-all;border-radius:14px;padding:9px 11px;box-shadow:0 1px 1px #00000006}#kakaoApp .kk-msg.in .kk-bubble{background:#fff;border-top-left-radius:3px}#kakaoApp .kk-msg.out .kk-bubble{background:#fee500;border-top-right-radius:3px}#kakaoApp .kk-time{font-size:10px;color:#536775;white-space:nowrap;flex:none}#kakaoApp .kk-callcard{background:#fff;border-radius:13px;padding:12px 14px;min-width:178px;max-width:210px;display:flex;flex-direction:column;gap:5px}#kakaoApp .kk-callcard strong{font-size:14px;font-weight:650}#kakaoApp .kk-callcard span{font-size:12px;color:#7b7b7b}#kakaoApp .kk-callcard svg{width:27px;height:27px;stroke:#1b1b1b;fill:none;stroke-width:2}
+#kakaoApp .kk-compose{position:absolute;bottom:13px;left:12px;right:12px;height:49px;display:flex;align-items:center;gap:10px;padding:0 10px;background:#ffffff77;border:1px solid #ffffffaa;border-radius:30px;backdrop-filter:blur(10px);-webkit-backdrop-filter:blur(10px)}#kakaoApp .kk-compose .kk-plus{background:#fff;border-radius:50%;width:35px;height:35px;font-size:29px;line-height:1;flex:none}#kakaoApp .kk-compose .kk-input{font-size:14px;color:#7b909f;flex:1;min-width:0}#kakaoApp .kk-compose .kk-face{font-size:20px;color:#536c7c}#kakaoApp .kk-compose .kk-hash{background:#fff;border-radius:50%;width:34px;height:34px;font-size:23px}
+#kakaoApp .kk-facetalk{position:absolute;inset:0;z-index:5;display:none;background:linear-gradient(150deg,#9bb7c9,#546e84 70%,#334a60);color:white;text-align:center}#kakaoApp .kk-facetalk.active{display:flex;flex-direction:column;align-items:center}#kakaoApp .kk-facetalk .kk-facename{font-size:28px;font-weight:650;margin-top:25vh}#kakaoApp .kk-facetalk .kk-facestatus{font-size:16px;color:#e7e7e7;margin-top:8px}#kakaoApp .kk-facetalk .kk-facelogo{width:80px;height:80px;border-radius:26px;background:#9ed1fa;display:grid;place-items:center;margin-top:23px}#kakaoApp .kk-facetalk .kk-facelogo svg{width:56px;height:56px}#kakaoApp .kk-facetalk .kk-hangup{position:absolute;bottom:100px;border-radius:50%;background:#f44345;color:white;width:67px;height:67px;font-size:29px}
+</style>
+<style id="v15-kakao-interactions">
+#kakaoApp .kk-compose .kk-input{border:0;outline:0;background:transparent;flex:1;min-width:0;font-size:14px;color:#222;font-family:inherit;padding:0 2px}
+#kakaoApp .kk-compose .kk-input::placeholder{color:#7b909f}
+#kakaoApp .kk-compose .kk-send{display:none;flex:none;width:31px;height:31px;border-radius:50%;background:#fee500;color:#222;font-size:23px;line-height:28px;font-weight:650}
+#kakaoApp .kk-compose.has-text .kk-send{display:block}
+#kakaoApp .kk-compose.has-text .kk-face,#kakaoApp .kk-compose.has-text .kk-hash{display:none}
+#kakaoApp .kk-typing{position:absolute;bottom:75px;left:54px;display:none;align-items:center;gap:5px;border-radius:13px 13px 13px 3px;background:#fff;padding:12px 15px;z-index:3;box-shadow:0 2px 7px #0001}
+#kakaoApp .kk-typing.visible{display:flex}
+#kakaoApp .kk-typing span{height:7px;width:7px;background:#9ba8b1;border-radius:50%;animation:kkPulse 1.1s ease-in-out infinite}
+#kakaoApp .kk-typing span:nth-child(2){animation-delay:.17s}#kakaoApp .kk-typing span:nth-child(3){animation-delay:.34s}
+@keyframes kkPulse{0%,60%,100%{opacity:.25;transform:translateY(0)}30%{opacity:1;transform:translateY(-4px)}}
+#kakaoApp .kk-unread{font-size:10px;color:#d3a400;align-self:flex-end;flex:none;margin-bottom:13px;font-weight:650}
+.phone:has(.kk-incoming.visible) .status{z-index:21;color:#fff!important}.phone:has(.kk-incoming.visible) .island{z-index:21}.phone:has(.kk-incoming.visible) .homebar{z-index:21!important;background:#fff!important}.kk-incoming{position:absolute;inset:0;z-index:18;display:none;overflow:hidden;color:white;background:radial-gradient(ellipse at 50% 84%,#435544 0%,transparent 72%),linear-gradient(160deg,#444a38,#2f3b34 70%,#38483e);font-family:-apple-system,BlinkMacSystemFont,'Apple SD Gothic Neo',sans-serif;text-align:center}
+.kk-incoming.visible{display:block}
+.kk-in-status{margin-top:clamp(135px,24%,195px);font-size:18px;color:#ffffffa8;font-weight:450;transition:opacity .25s}
+.kk-in-name{font-size:35px;font-weight:560;margin-top:8px;letter-spacing:-1px}
+.kk-in-bottom{position:absolute;bottom:88px;left:30px;right:30px}
+.kk-in-actions{display:flex;justify-content:space-between;padding:0 25px 29px;font-size:12px}
+.kk-in-actions>div{display:flex;flex-direction:column;gap:8px;align-items:center}
+.kk-in-actions span{font-size:22px}
+.kk-swipe{height:66px;border-radius:40px;background:#ffffff38;position:relative;display:flex;align-items:center;justify-content:center;color:#ffffffb5;font-size:16px;touch-action:none;user-select:none;overflow:hidden}
+.kk-swipe-thumb{position:absolute;left:4px;top:4px;width:58px;height:58px;border-radius:50%;background:#fff;display:grid;place-items:center;box-shadow:0 1px 6px #0003;z-index:2;transition:transform .16s}
+.kk-swipe-thumb svg{height:30px;width:30px}
+.kk-swipe span{padding-left:42px}
+.kk-in-active .kk-in-status{margin-top:clamp(135px,24%,195px)}
+.kk-in-subtitle{position:absolute;top:36%;left:7%;right:7%;font-size:19px;line-height:1.5;font-weight:430;min-height:95px;display:flex;align-items:center;justify-content:center;text-wrap:balance;word-break:keep-all}
+.kk-in-subtitle span{display:block;opacity:0;transform:translateY(9px);transition:opacity .42s ease,transform .42s ease}
+.kk-in-subtitle span.visible{opacity:1;transform:translateY(0)}
+.kk-in-callcontrols{position:absolute;bottom:100px;left:0;right:0;display:flex;align-items:center;flex-direction:column;gap:9px;font-size:13px}
+.kk-in-callcontrols button{width:72px;height:72px;border-radius:50%;border:1px solid #ffffff66;background:#f10c17;display:grid;place-items:center}
+.kk-in-callcontrols svg{width:37px;height:37px}
+.kk-in-instruction{position:absolute;bottom:47px;left:0;right:0;font-size:11px;color:#ffffff85}
+.kk-incoming .kk-in-status,.kk-incoming .kk-in-name{pointer-events:none}
+@media(max-height:680px){.kk-in-bottom{bottom:60px}.kk-in-callcontrols{bottom:75px}}
+</style>
+
+<style id="v16-phone-polish">
+/* The contact is named differently in KakaoTalk and the system Phone app. */
+.kk-incoming .kk-in-status{margin-top:clamp(120px,21%,185px);font-size:clamp(16px,3.5vw,19px);color:#ffffffa6}
+.kk-incoming .kk-in-name{font-size:clamp(31px,7.2vw,39px);font-weight:550;letter-spacing:-.9px}
+.kk-incoming .kk-swipe-thumb svg{width:33px;height:33px;display:block;flex-shrink:0;overflow:visible}
+.kk-incoming .kk-swipe-thumb{display:flex;align-items:center;justify-content:center}
+.kk-in-active .kk-in-subtitle{top:32%;font-size:clamp(17px,4.1vw,20px);font-weight:430;line-height:1.55;left:9%;right:9%;min-height:110px}
+.kk-in-active .kk-in-callcontrols{bottom:clamp(68px,9%,100px);left:7%;right:7%;display:block}
+.kk-in-active .kk-in-control-grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:clamp(20px,4vh,35px) 8px;justify-items:center}
+.kk-in-active .kk-in-control{display:flex;flex-direction:column;align-items:center;gap:8px;font-size:clamp(12px,3.1vw,14px);color:#fff;white-space:nowrap}
+.kk-in-active .kk-in-control .kk-in-round{height:clamp(62px,16vw,76px);width:clamp(62px,16vw,76px);border-radius:50%;background:#ffffff25;border:1px solid #ffffff60;color:#fff;display:grid;place-items:center;box-shadow:inset 0 1px 3px #ffffff27;cursor:pointer;padding:0}
+.kk-in-active .kk-in-control .kk-in-round svg{height:32px;width:32px;display:block}
+.kk-in-active .kk-in-control .kk-in-round.kk-disabled{color:#ffffff60;opacity:.62}
+.kk-in-active .kk-in-control .kk-in-round.kk-in-end{background:#f00d16;border-color:#ff7777;box-shadow:inset 0 1px 2px #ffffff50}
+.kk-in-active .kk-in-control .kk-in-round.kk-in-end svg{width:36px;height:36px}
+.kk-in-active .kk-in-instruction{bottom:33px;font-size:10px}
+@media(max-height:690px){.kk-in-active .kk-in-callcontrols{bottom:50px}.kk-in-active .kk-in-control-grid{gap:14px 6px}.kk-in-active .kk-in-instruction{bottom:18px}}
+</style>
+</head>
 <body>
 <div class="phone">
 <div class="wall"></div><div class="island"></div>
@@ -216,7 +279,37 @@
  <div class="ph-scroll" id="photoScroll"><div class="ph-hero"><div><h1>보관함</h1><div class="ph-count" id="photoCount">사진 불러오는 중…</div></div><div class="ph-actions"><button class="ph-round ph-filter" type="button" aria-label="필터"><svg viewBox="0 0 24 24"><path d="M3 6h18M6 12h12M9 18h6"/></svg></button><button class="ph-round" type="button">선택</button></div></div><div class="ph-grid" id="photoGrid"></div><div class="ph-empty" id="photoEmpty" hidden>아직 저장된 사진이 없어.<br>GitHub의 <strong>photos</strong> 폴더에 사진을 올려줘!</div></div>
  <div class="ph-nav"><div class="ph-tabs"><button type="button" class="ph-tab selected"><svg viewBox="0 0 24 24"><rect x="2" y="3" width="20" height="18" rx="3"/><circle cx="8" cy="9" r="2"/><path d="m4 18 6-6 4 4 3-3 4 4"/></svg>보관함</button><button type="button" class="ph-tab"><svg viewBox="0 0 24 24"><rect x="4" y="7" width="16" height="14" rx="2"/><path d="M7 4h10M9 2h6"/></svg>모음</button></div><button type="button" class="ph-search" aria-label="검색"><svg viewBox="0 0 24 24"><circle cx="10" cy="10" r="7"/><path d="m15.5 15.5 6 6"/></svg></button></div>
 </section>
-<section id="phoneApp" aria-label="전화 앱"><div class="phead"><button class="pglass" id="pLeft">편집</button><div class="ptitle" id="pTitle">통화</div><button class="pglass" id="pRight">☷</button></div><div class="pbody" id="pBody"></div><div class="pnav" id="pNav"><div class="pnavmain"><button data-tab="recent"><span class="navico">◷</span>통화</button><button data-tab="contacts"><span class="navico">◉</span>연락처</button><button data-tab="keypad"><span class="navico">⠿</span>키패드</button></div><button class="psearch" data-tab="search">⌕</button></div></section><div class="toast" id="toast"></div><div class="homebar" id="homebar"></div>
+<section id="kakaoApp" aria-label="카카오톡">
+<div class="kk-inbox"><div class="kk-titlebar"><div class="kk-title">채팅</div><div class="kk-icons"><svg viewBox="0 0 24 24"><circle cx="10" cy="10" r="7"/><path d="m15 15 6 6"/></svg><svg viewBox="0 0 24 24"><path d="M20 11a8 8 0 0 1-8 8c-1 0-2-.2-3-.6L4 20l1.6-4A8 8 0 1 1 20 11Z"/><path d="M19 2v6m-3-3h6"/></svg><svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="3"/><path d="M12 2v2m0 16v2M2 12h2m16 0h2M4.9 4.9l1.4 1.4m11.4 11.4 1.4 1.4M19.1 4.9l-1.4 1.4M6.3 17.7l-1.4 1.4"/></svg></div></div>
+<div class="kk-chips"><span class="kk-chip active">전체</span><span class="kk-chip">안읽음</span><span class="kk-chip">친구</span><span class="kk-chip">통화</span></div>
+<div class="kk-inbox-list"><button type="button" class="kk-row" id="kkOpenChat"><span class="kk-profile" id="kkListAvatar"></span><span class="kk-row-main"><span class="kk-row-top"><span class="kk-row-name">내 딸기♥</span><span class="kk-pin">📌</span></span><span class="kk-preview">넵</span></span><span class="kk-row-time">어제</span></button></div>
+<div class="kk-tabbar"><button aria-label="친구"><svg viewBox="0 0 24 24"><circle cx="12" cy="7" r="4"/><path d="M3 22c0-9 18-9 18 0Z"/></svg></button><button class="selected" aria-label="채팅"><svg viewBox="0 0 24 24"><path d="M12 3C6 3 2 7 2 12c0 3 2 6 5 7l-1 3 4-2c6 1 12-3 12-8S18 3 12 3Z"/></svg></button><button aria-label="통화"><svg viewBox="0 0 24 24"><path d="M3 4c0 10 7 17 17 17l3-5-6-4-3 3-5-5 3-3-4-6Z"/></svg></button><button aria-label="더보기"><svg viewBox="0 0 24 24"><circle cx="5" cy="12" r="2"/><circle cx="12" cy="12" r="2"/><circle cx="19" cy="12" r="2"/></svg></button></div></div>
+<div class="kk-chat" id="kkChat"><div class="kk-chathead"><button type="button" class="kk-back" id="kkBack"><svg viewBox="0 0 24 24"><path d="m16 3-9 9 9 9"/></svg><span>1</span></button><span class="kk-chatname">내 딸기♥</span><div class="kk-chattools"><button aria-label="검색"><svg viewBox="0 0 24 24"><circle cx="10" cy="10" r="7"/><path d="m15 15 6 6"/></svg></button><button aria-label="페이스톡" id="kkCall"><svg viewBox="0 0 24 24"><path d="M5 3c1 8 7 14 15 16l2-4-5-3-2 2-5-5 2-2-3-5Z"/></svg></button><button aria-label="메뉴"><svg viewBox="0 0 24 24"><path d="M3 5h18M3 12h18M3 19h18"/></svg></button></div></div><div class="kk-chat-scroll" id="kkChatScroll"></div><div class="kk-typing" id="kkTyping" aria-label="내 딸기♥ 입력 중"><span></span><span></span><span></span></div><div class="kk-compose"><button type="button" class="kk-plus" aria-label="첨부">+</button><input class="kk-input" id="kkTextInput" type="text" placeholder="메시지 입력" aria-label="카카오톡 메시지 입력" autocomplete="off" maxlength="240"><button class="kk-send" id="kkSend" type="button" aria-label="메시지 전송">↑</button><span class="kk-face">☻</span><button type="button" class="kk-hash">#</button></div></div>
+<div class="kk-facetalk" id="kkFaceTalk"><div class="kk-facename">내 딸기♥</div><div class="kk-facestatus" id="kkFaceStatus">페이스톡 연결 중…</div><div class="kk-facelogo" id="kkFaceAvatar"></div><button type="button" class="kk-hangup" id="kkHangup" aria-label="통화 종료">☎</button></div>
+</section>
+<div id="kkIncoming" class="kk-incoming" aria-label="패치에게 걸려온 전화" role="dialog" aria-modal="true">
+  <div class="kk-in-status">휴대전화</div><div class="kk-in-name">♥선배님♥</div>
+  <div class="kk-in-bottom">
+    <div class="kk-in-actions"><div><span>◷</span>나중에 보기</div><div><span>●</span>메시지</div></div>
+    <div class="kk-swipe" id="kkSwipe"><div class="kk-swipe-thumb" id="kkSwipeThumb"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M6.6 2.5c-.8-.6-2-.5-2.7.3L2.4 4.5c-1.1 1.2-1.3 2.8-.8 4.5 1.3 4.2 6.4 9.3 10.6 10.6 1.7.5 3.3.3 4.5-.8l1.7-1.5c.8-.7.9-1.9.3-2.7l-2.9-3.5c-.6-.7-1.6-.9-2.4-.4l-2 1.3a15 15 0 0 1-6.3-6.3l1.3-2c.5-.8.3-1.8-.4-2.4Z" fill="#29c95e"/></svg></div><span>밀어서 통화하기 ›</span></div>
+  </div>
+</div>
+<div id="kkIncomingActive" class="kk-incoming kk-in-active" aria-label="패치와 통화 중" role="dialog" aria-modal="true">
+  <div class="kk-in-status" id="kkIncomingTimer">00:00</div><div class="kk-in-name">♥선배님♥</div>
+  <div class="kk-in-subtitle" id="kkIncomingSubtitle" aria-live="polite"></div>
+  <div class="kk-in-callcontrols">
+ <div class="kk-in-control-grid">
+  <div class="kk-in-control"><button type="button" class="kk-in-round" aria-label="스피커"><svg viewBox="0 0 24 24"><path d="M3 9v6h4l5 4V5L7 9H3Zm12-1a6 6 0 0 1 0 8m2-11a10 10 0 0 1 0 14" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg></button><span>스피커</span></div>
+  <div class="kk-in-control"><button type="button" class="kk-in-round kk-disabled" aria-label="FaceTime 비활성화"><svg viewBox="0 0 24 24"><rect x="3" y="6" width="13" height="12" rx="2" fill="none" stroke="currentColor" stroke-width="1.8"/><path d="m16 10 5-3v10l-5-3" fill="none" stroke="currentColor" stroke-width="1.8"/></svg></button><span>FaceTime</span></div>
+  <div class="kk-in-control"><button type="button" class="kk-in-round" aria-label="소리 끔"><svg viewBox="0 0 24 24"><rect x="9" y="3" width="6" height="12" rx="3" fill="none" stroke="currentColor" stroke-width="1.8"/><path d="M5 11a7 7 0 0 0 14 0M12 18v3M8 21h8M3 3l18 18" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/></svg></button><span>소리 끔</span></div>
+  <div class="kk-in-control"><button type="button" class="kk-in-round" aria-label="더 보기"><svg viewBox="0 0 24 24"><circle cx="5" cy="12" r="1.7" fill="currentColor"/><circle cx="12" cy="12" r="1.7" fill="currentColor"/><circle cx="19" cy="12" r="1.7" fill="currentColor"/></svg></button><span>더 보기</span></div>
+  <div class="kk-in-control"><button type="button" class="kk-in-round kk-in-end" id="kkIncomingHangup" aria-label="통화 종료"><svg viewBox="0 0 32 32"><path d="M4 14q12-9 24 0l-2 6-6-2v-4q-4-2-8 0v4l-6 2Z" fill="white"/></svg></button><span>종료</span></div>
+  <div class="kk-in-control"><button type="button" class="kk-in-round" aria-label="키패드"><svg viewBox="0 0 24 24"><g fill="currentColor"><circle cx="5" cy="5" r="2"/><circle cx="12" cy="5" r="2"/><circle cx="19" cy="5" r="2"/><circle cx="5" cy="12" r="2"/><circle cx="12" cy="12" r="2"/><circle cx="19" cy="12" r="2"/><circle cx="5" cy="19" r="2"/><circle cx="12" cy="19" r="2"/><circle cx="19" cy="19" r="2"/></g></svg></button><span>키패드</span></div>
+ </div>
+</div>
+  <div class="kk-in-instruction">화면을 터치하면 다음 대사가 나옵니다</div>
+</div>
+<section id="phoneApp"  aria-label="전화 앱"><div class="phead"><button class="pglass" id="pLeft">편집</button><div class="ptitle" id="pTitle">통화</div><button class="pglass" id="pRight">☷</button></div><div class="pbody" id="pBody"></div><div class="pnav" id="pNav"><div class="pnavmain"><button data-tab="recent"><span class="navico">◷</span>통화</button><button data-tab="contacts"><span class="navico">◉</span>연락처</button><button data-tab="keypad"><span class="navico">⠿</span>키패드</button></div><button class="psearch" data-tab="search">⌕</button></div></section><div class="toast" id="toast"></div><div class="homebar" id="homebar"></div>
 </div>
 <script>
 const PIN='0831';let entered='',current='lock',toastTimer;
@@ -229,7 +322,7 @@ const keys=['1','2','3','4','5','6','7','8','9','','0','⌫'];$('keypad').innerH
 function toastMessage(message){const t=$('toast');t.textContent=message;t.style.display='block';clearTimeout(toastTimer);toastTimer=setTimeout(()=>t.style.display='none',2200)}
 $('flashlightButton').addEventListener('click',e=>{e.stopPropagation();const b=e.currentTarget;b.classList.toggle('active');b.setAttribute('aria-label',b.classList.contains('active')?'손전등 끄기':'손전등 켜기');toastMessage(b.classList.contains('active')?'손전등 켜짐 (화면 연출)':'손전등 꺼짐')});
 $('cameraButton').addEventListener('click',e=>{e.stopPropagation();toastMessage('카메라 화면은 다음 단계에서 구현할 예정이야!')});
-$('lock').addEventListener('click',e=>{if(e.target.closest('.lockbottom'))return;show('pass')});let touchStart=0;$('lock').addEventListener('touchstart',e=>touchStart=e.touches[0].clientY,{passive:true});$('lock').addEventListener('touchend',e=>{if(touchStart-e.changedTouches[0].clientY>35)show('pass')},{passive:true});$('lockButton').onclick=()=>show('lock');$('homebar').onclick=()=>{if(current==='photos'){closePhotos();}else if(current==='phone'){closePhone();}else if(current==='messages'){if(activeMessageThread!==null)closeMessageThread();else closeMessages();}else if(current==='home')show('lock');else if(current==='lock')show('pass');else show('lock')};
+$('lock').addEventListener('click',e=>{if(e.target.closest('.lockbottom'))return;show('pass')});let touchStart=0;$('lock').addEventListener('touchstart',e=>touchStart=e.touches[0].clientY,{passive:true});$('lock').addEventListener('touchend',e=>{if(touchStart-e.changedTouches[0].clientY>35)show('pass')},{passive:true});$('lockButton').onclick=()=>show('lock');$('homebar').onclick=()=>{if(current==='kakao'){if(kkFaceActive)endKakaoFaceTalk();else if(kkChatOpen)closeKakaoChat();else closeKakao();}else if(current==='photos'){closePhotos();}else if(current==='phone'){closePhone();}else if(current==='messages'){if(activeMessageThread!==null)closeMessageThread();else closeMessages();}else if(current==='home')show('lock');else if(current==='lock')show('pass');else show('lock')};
 const iconSVG={
 '설정':'<g fill="none" stroke="#6a6e75" stroke-width="7"><circle cx="32" cy="32" r="15"/><circle cx="32" cy="32" r="7" fill="#8b9099" stroke="none"/></g><path fill="#777c85" d="M27 5h10l2 7 6 3 7-3 7 8-4 6 1 7 6 5-4 10-8-1-5 5-1 8H27l-2-8-6-4-8 1-4-10 6-5 1-7-4-6 7-8 7 3 6-3z" fill-rule="evenodd" opacity=".8"/><circle cx="32" cy="32" r="12" fill="#d9dce1"/><circle cx="32" cy="32" r="6" fill="#707780"/>',
 '날씨':'<circle cx="39" cy="22" r="12" fill="#ffd343"/><path d="M16 46h33a11 11 0 0 0-3-21 17 17 0 0 0-31 6A8 8 0 0 0 16 46" fill="#fff"/>',
@@ -249,7 +342,7 @@ const apps=['설정','날씨','카메라','캘린더','알람','FaceTime','Safar
 const dock=['전화','메시지','카카오톡','갤러리'];
 const colors={'설정':'#d9dce2','날씨':'linear-gradient(#167cde,#78c9f5)','카메라':'linear-gradient(#eef0f3,#b6bac1)','캘린더':'#fff','알람':'#fff','FaceTime':'#35c85d','Safari':'#fff','메일':'#2189ed','메모':'#fff','Instagram':'#fff','전화':'#35c95d','메시지':'#43ca62','카카오톡':'#fee500','갤러리':'#fff'};
 const customIcons={'전화':'phone.png','메시지':'messages.png','카카오톡':'kakao.png','갤러리':'photos.png','메일':'mail.png','Instagram':'instagram.png','설정':'settings.png','날씨':'weather.png','Safari':'safari.png'};
-function makeApp(name){const b=document.createElement('button');b.className='app';b.setAttribute('aria-label',name);const icon=document.createElement('span');icon.className='appicon';icon.style.background=colors[name];if(customIcons[name]){const img=document.createElement("img");img.src="icons/"+customIcons[name];img.alt="";icon.appendChild(img)}else{icon.innerHTML=`<svg viewBox="0 0 64 64" aria-hidden="true" focusable="false">${iconSVG[name]}</svg>`;}const label=document.createElement('span');label.textContent=name;b.append(icon,label);b.onclick=()=>{if(name==='전화'){openPhone();return;}if(name==='메시지'){openMessages();return;}if(name==='갤러리'){openPhotos();return;}const t=$('toast');t.textContent=`${name} 앱은 다음 단계에서 구현할 예정이야!`;t.style.display='block';clearTimeout(toastTimer);toastTimer=setTimeout(()=>t.style.display='none',2400)};return b}
+function makeApp(name){const b=document.createElement('button');b.className='app';b.setAttribute('aria-label',name);const icon=document.createElement('span');icon.className='appicon';icon.style.background=colors[name];if(customIcons[name]){const img=document.createElement("img");img.src="icons/"+customIcons[name];img.alt="";icon.appendChild(img)}else{icon.innerHTML=`<svg viewBox="0 0 64 64" aria-hidden="true" focusable="false">${iconSVG[name]}</svg>`;}const label=document.createElement('span');label.textContent=name;b.append(icon,label);b.onclick=()=>{if(name==='전화'){openPhone();return;}if(name==='메시지'){openMessages();return;}if(name==='카카오톡'){openKakao();return;}if(name==='갤러리'){openPhotos();return;}const t=$('toast');t.textContent=`${name} 앱은 다음 단계에서 구현할 예정이야!`;t.style.display='block';clearTimeout(toastTimer);toastTimer=setTimeout(()=>t.style.display='none',2400)};return b}
 apps.forEach(a=>$('apps').appendChild(makeApp(a)));dock.forEach(a=>$('dock').appendChild(makeApp(a)));
 function clock(){const d=new Date(),hm=d.toLocaleTimeString('en-GB',{hour:'2-digit',minute:'2-digit'}),date=d.toLocaleDateString('ko-KR',{month:'long',day:'numeric',weekday:'long'});const st=$('statusTime');if(st)st.textContent=hm;$('lockTime').textContent=hm;$('lockDate').textContent=date;$('widgetDay').textContent=d.getDate();$('widgetDate').textContent=d.toLocaleDateString('ko-KR',{weekday:'long'});const cd=document.getElementById('calendarIconDay');if(cd)cd.textContent=d.getDate()}clock();setInterval(clock,15000);updateDots();
 
@@ -510,5 +603,167 @@ function closePhotos(){
  status.querySelector('.status-right')?.style.removeProperty('filter');
  document.querySelector('.island').classList.remove('inphone');current='home';
 }
+
+/* V14 KakaoTalk: one pinned fictional conversation, with FaceTalk history. */
+const kkAvatarSvg='<svg viewBox="0 0 48 48" aria-hidden="true"><circle cx="24" cy="18" r="9" fill="#e5f4ff"/><path d="M8 42c1-14 31-14 32 0" fill="#e5f4ff"/></svg>';
+const kkMessages=[
+['day','2026년 10월 16일 금요일'],
+['out','뿌엥에에ㅠㅠㅠ','10:02'],['out','선배님ㅠㅠㅠ','10:02'],['out','보고싶어요ㅠㅠㅠ','10:03'],['out','선배님안아주새요','10:03'],['out','선배님저만나면안아주셔야해요ㅠㅠㅠ','10:04'],
+['out','선배님 금일 ㅇㅇ보고서 수정 완료했습니다.','11:07'],['in','수고했네.','11:16'],
+['day','2026년 10월 17일 토요일'],
+['out','선배님 집에 샴푸 다 써가시던데요~','18:42'],['out','오늘 퇴근 후에 장 보러 가시죠?','18:42'],['in','그건 또 어떻게 알았나.','18:46'],['in','알겠네.','18:46'],['out','선배님 집에서 씻는 거 한두번도 아닌데 당연히 알지 말입니다~♥','18:48'],
+['day','2026년 10월 18일 일요일'],
+['out','선배님','21:10'],['out','진짜','21:10'],['out','저도 참는데 한개가 있습니다','21:11'],['in','한개가 아니라 한계일세','21:13'],['out','됐어요','21:13'],['out','바보','21:13'],['out','벽창호','21:14'],['out','둔탱이','21:14'],
+['day','2026년 10월 19일 월요일'],
+['out','선배님','15:25'],['out','이에로사이다 없다는데요~?','15:25'],['in','?','15:29'],['in','뭔 말이지','15:29'],['out','모르시면 됐어요…','15:30'],
+['day','2026년 10월 20일 화요일'],
+['out','선배님 뭐하고 계심까~~♥♥','22:06'],['in','씻으려고.','22:08'],['call','페이스톡 해요','22:08'],['reject','거절','22:08'],['call','페이스톡 해요','22:09'],['reject','거절','22:09'],['out','선ㅂ배님','22:09'],['out','저도','22:09'],['out','저도 같이해요','22:09'],['in','닥쳐','22:10'],
+['day','2026년 10월 21일 수요일'],
+['out','선배님 먼작귀 극장판 개봉했다는데 같이 보러가시겠슴까~?♥','23:03'],['in','먼작귀가 뭔가','23:05'],['out','먼가 작고 귀여운 녀석이라는 뜻입니다^^','23:05'],['in','자네는 작지 않네','23:06'],['out','예?','23:06'],['in','귀엽지도 않지','23:07'],['out','예에?ㅠㅠㅠㅠ','23:07'],['in','내일 신작게임 베타테스트 진행하는 날이니까 잠이나 일찍 자게.','23:08'],['out','선배님 바보ㅠㅠㅠ 둔탱이ㅠㅠㅠ 벽창호ㅠㅠㅠ','23:08'],
+['day','2026년 10월 22일 목요일'],
+['in','치트','18:31'],['in','이따가 올 때 그것 좀 사다줄 수 있겠나','18:31'],['out','그거요?','18:33'],['out','제가 쿠팡으로 대량주문해놨지 말입니다~♥','18:33'],['in','그딴 거 말고','18:34'],['in','참기름 사오라고','18:34'],['out','넵','18:34']
+];
+let kkChatOpen=false,kkFaceActive=false,kkFaceTimer=null;
+function renderKakao(){
+ $('kkListAvatar').innerHTML=kkAvatarSvg;$('kkFaceAvatar').innerHTML=kkAvatarSvg;
+ $('kkChatScroll').innerHTML=[...kkMessages,...kkExtraMessages].map(([kind,text,time,unread],i)=>{
+  if(kind==='day')return `<div class="kk-day">${escapeHTML(text)} ›</div>`;
+  if(kind==='call'||kind==='reject'){
+   if(kind==='reject')return `<div class="kk-msg in"><div class="kk-miniavatar">${kkAvatarSvg}</div><div class="kk-msg-body"><div class="kk-sender">내 딸기♥</div><div class="kk-bubbleline"><div class="kk-callcard"><strong>페이스톡을 받지 않았습니다.</strong><span>${escapeHTML(time)}</span></div></div></div></div>`;
+   return `<div class="kk-msg out"><div class="kk-msg-body"><div class="kk-bubbleline"><button type="button" class="kk-callcard" data-facetalk="true" aria-label="페이스톡 연결 화면 보기"><svg viewBox="0 0 30 30"><rect x="3" y="6" width="18" height="17" rx="3"/><path d="m21 12 6-4v13l-6-4"/></svg><strong>페이스톡 해요</strong><span>응답 없음 · ${escapeHTML(time)}</span></button></div></div></div>`;
+  }
+  return `<div class="kk-msg ${kind}">${kind==='in'?`<div class="kk-miniavatar">${kkAvatarSvg}</div>`:''}<div class="kk-msg-body">${kind==='in'?'<div class="kk-sender">내 딸기♥</div>':''}<div class="kk-bubbleline"><div class="kk-bubble">${escapeHTML(text)}</div><span class="kk-time">${escapeHTML(time)}</span>${unread?'<span class="kk-unread">1</span>':''}</div></div></div>`;
+ }).join('');
+}
+function openKakao(){show('home');current='kakao';$('kakaoApp').classList.add('active');$('homebar').style.background='#111';$('homebar').style.zIndex='12';const status=document.querySelector('.status');status.classList.add('inphone');status.style.color='#000';status.querySelector('.status-right')?.style.setProperty('filter','brightness(0)');document.querySelector('.island').classList.add('inphone');renderKakao()}
+function openKakaoChat(){kkChatOpen=true;$('kkChat').classList.add('open');requestAnimationFrame(()=>$('kkChatScroll').scrollTop=$('kkChatScroll').scrollHeight)}
+function closeKakaoChat(){kkChatOpen=false;$('kkChat').classList.remove('open')}
+function openKakaoFaceTalk(){if(kkFaceActive)return;kkFaceActive=true;$('kkFaceTalk').classList.add('active');$('kkFaceStatus').textContent='페이스톡 연결 중…';clearTimeout(kkFaceTimer);kkFaceTimer=setTimeout(()=>{if(kkFaceActive){$('kkFaceStatus').textContent='응답 없음';kkFaceTimer=setTimeout(endKakaoFaceTalk,1300)}},2600)}
+function endKakaoFaceTalk(){clearTimeout(kkFaceTimer);kkFaceActive=false;$('kkFaceTalk').classList.remove('active')}
+function closeKakao(){endKakaoFaceTalk();closeKakaoChat();$('kakaoApp').classList.remove('active');$('homebar').style.background='white';$('homebar').style.zIndex='8';const status=document.querySelector('.status');status.classList.remove('inphone');status.style.color='';status.querySelector('.status-right')?.style.removeProperty('filter');document.querySelector('.island').classList.remove('inphone');current='home'}
+$('kkOpenChat').onclick=openKakaoChat;$('kkBack').onclick=closeKakaoChat;$('kkCall').onclick=openKakaoFaceTalk;$('kkHangup').onclick=endKakaoFaceTalk;
+$('kkChatScroll').addEventListener('click',e=>{if(e.target.closest('[data-facetalk]'))openKakaoFaceTalk()});
+
+/* V15: keyword-triggered local fictional KakaoTalk replies and simulated incoming call. */
+const KK_SAVE_KEY='cheat_iphone_kakao_v15';
+let kkExtraMessages=[];
+try{const saved=JSON.parse(localStorage.getItem(KK_SAVE_KEY)||'[]');if(Array.isArray(saved))kkExtraMessages=saved.filter(v=>Array.isArray(v)&&v.length>=3).slice(-250)}catch(e){}
+const kkReplyTimers=new Set();
+let kkReplyQueue=Promise.resolve(),kkTypingCount=0;
+function kkPersist(){try{localStorage.setItem(KK_SAVE_KEY,JSON.stringify(kkExtraMessages.slice(-250)))}catch(e){}}
+function kkTimeNow(){return new Date().toLocaleTimeString('ko-KR',{hour:'2-digit',minute:'2-digit',hour12:false})}
+function kkAddMessage(kind,text,unread=false){
+ kkExtraMessages.push([kind,text,kkTimeNow(),unread]);
+ kkPersist();renderKakao();requestAnimationFrame(()=>{$('kkChatScroll').scrollTop=$('kkChatScroll').scrollHeight});
+ if(kind==='out'){$('kkOpenChat').querySelector('.kk-preview').textContent=text}
+}
+function kkWait(ms){return new Promise(resolve=>{const t=setTimeout(()=>{kkReplyTimers.delete(t);resolve()},ms);kkReplyTimers.add(t)})}
+function kkNormalise(text){return text.toLowerCase().replace(/\s+/g,'').replace(/[~!?.♥♡ㅠㅜ]+/g,'')}
+function kkChoose(a){return a[Math.floor(Math.random()*a.length)]}
+function kkGetReply(raw){
+ const q=kkNormalise(raw).replace(/선배님|선배|패치/g,'');
+ if(q.includes('목소리')&&(q.includes('듣고싶')||q.includes('들려')||q.includes('듣고'))){return {call:true}}
+ if(q.includes('보고싶'))return {lines:[['조금 전에도 보지 않았나.',1700],[kkChoose(['내가 그쪽으로 가지.','집으로 오게.']),2300]]}
+ if(q.includes('사랑해')||q.includes('사랑합니다'))return {lines:[['근무 시간에는 업무에 집중하게.',1900],['나도.',5000]]}
+ if(q.includes('딸기칩'))return {lines:[['또 그 타령인가.',2100]]}
+ if(q.includes('뭐하')||q.includes('뭐하고')||q.includes('무엇하'))return {lines:[[kkChoose(['보고서 검토 중일세.','아이템 배치 시뮬레이션 중일세.']),2000]]}
+ if(q.includes('키스'))return {lines:Math.random()<.25?[]:[[kkChoose(['헛소리.','달리 할 짓이 없나?']),2200]]}
+ return {lines:[]}; // unmatched messages are left unanswered
+}
+function kkSetTyping(visible){$('kkTyping').classList.toggle('visible',visible);if(visible)requestAnimationFrame(()=>{$('kkChatScroll').scrollTop=$('kkChatScroll').scrollHeight})}
+async function kkDeliverReplies(reply){
+ if(reply.call){await kkWait(2100);kkClearReadMarks();kkBeginIncoming();return}
+ for(const [line,delay] of reply.lines){
+  kkSetTyping(true);
+  await kkWait(delay);
+  kkSetTyping(false);
+  kkClearReadMarks();
+  kkAddMessage('in',line);
+  await kkWait(420);
+ }
+}
+function kkClearReadMarks(){
+ let dirty=false;
+ for(const msg of kkExtraMessages){if(msg[0]==='out'&&msg[3]){msg[3]=false;dirty=true}}
+ if(dirty){kkPersist();renderKakao()}
+}
+function kkSendText(){
+ const input=$('kkTextInput');const raw=input.value.trim();
+ if(!raw)return;
+ input.value='';input.blur();input.closest('.kk-compose').classList.remove('has-text');
+ kkAddMessage('out',raw,true);
+ const reply=kkGetReply(raw);
+ kkReplyQueue=kkReplyQueue.then(()=>kkDeliverReplies(reply)).catch(()=>kkSetTyping(false));
+}
+$('kkTextInput').addEventListener('input',e=>e.target.closest('.kk-compose').classList.toggle('has-text',!!e.target.value.trim()));
+$('kkTextInput').addEventListener('keydown',e=>{if(e.key==='Enter'){e.preventDefault();kkSendText()}});
+$('kkSend').addEventListener('click',kkSendText);
+let kkIncomingTick=null,kkIncomingStart=0,kkIncomingIndex=-1,kkIncomingActive=false,kkIncomingTransition=null;
+const kkIncomingLines=['그래.','목소리가 듣고싶다고.','들려줬으니까 이만 끊겠네.','…','보고 싶으니까 집으로 오겠다고?','얼굴은 이미 회사에서 보지 않았나.','그리고 자네가 내일 데이트 하자며.','…','하루도 못 참을 건 또 뭔가.','인내심이라는 걸 좀 길러보게.','…','그래. 잘 자.','…','…','나도.'];
+function kkBeginIncoming(){
+ kkIncomingIndex=-1;kkIncomingActive=false;
+ $('kkIncoming').classList.add('visible');
+ $('kkIncomingActive').classList.remove('visible');
+ $('kkIncomingSubtitle').innerHTML='';
+ $('homebar').style.zIndex='8';$('homebar').style.background='white';
+ const status=document.querySelector('.status');status.style.color='white';
+ status.querySelector('.status-right')?.style.setProperty('filter','brightness(0) invert(1)');
+}
+function kkAnswerIncoming(){
+ $('kkIncoming').classList.remove('visible');
+ $('kkIncomingActive').classList.add('visible');
+ kkIncomingActive=true;kkIncomingStart=Date.now();kkIncomingIndex=-1;
+ $('kkIncomingTimer').textContent='00:00';
+ clearInterval(kkIncomingTick);
+ kkIncomingTick=setInterval(()=>{
+  const seconds=Math.floor((Date.now()-kkIncomingStart)/1000);
+  $('kkIncomingTimer').textContent=String(Math.floor(seconds/60)).padStart(2,'0')+':'+String(seconds%60).padStart(2,'0');
+ },250);
+ kkShowIncomingLine();
+}
+function kkShowIncomingLine(){
+ if(!kkIncomingActive)return;
+ if(kkIncomingIndex>=kkIncomingLines.length-1){kkEndIncoming();return}
+ kkIncomingIndex++;
+ const target=$('kkIncomingSubtitle');const old=target.querySelector('span');
+ if(old)old.classList.remove('visible');
+ clearTimeout(kkIncomingTransition);
+ kkIncomingTransition=setTimeout(()=>{
+  if(!kkIncomingActive)return;
+  target.innerHTML='<span>'+escapeHTML(kkIncomingLines[kkIncomingIndex])+'</span>';
+  requestAnimationFrame(()=>requestAnimationFrame(()=>target.querySelector('span')?.classList.add('visible')));
+ },old?300:20);
+}
+function kkEndIncoming(){
+ if(!kkIncomingActive&&!$('kkIncoming').classList.contains('visible'))return;
+ kkIncomingActive=false;clearInterval(kkIncomingTick);clearTimeout(kkIncomingTransition);
+ $('kkIncomingSubtitle').querySelector('span')?.classList.remove('visible');
+ $('kkIncomingTimer').textContent='통화 종료';
+ setTimeout(()=>{
+  $('kkIncomingActive').classList.remove('visible');$('kkIncoming').classList.remove('visible');
+  const status=document.querySelector('.status');status.style.color='#000';
+  status.querySelector('.status-right')?.style.setProperty('filter','brightness(0)');
+  $('homebar').style.background='#111';$('homebar').style.zIndex='12';
+ },1000);
+}
+$('kkIncomingActive').addEventListener('click',e=>{if(e.target.closest('.kk-in-control-grid'))return;kkShowIncomingLine()});
+$('kkIncomingHangup').addEventListener('click',kkEndIncoming);
+let kkSwipeStartX=null,kkSwipeMoved=0;
+const kkSwipe=$('kkSwipe'),kkThumb=$('kkSwipeThumb');
+kkSwipe.addEventListener('pointerdown',e=>{kkSwipeStartX=e.clientX;kkSwipeMoved=0;kkSwipe.setPointerCapture(e.pointerId)});
+kkSwipe.addEventListener('pointermove',e=>{
+ if(kkSwipeStartX===null)return;
+ kkSwipeMoved=Math.max(0,Math.min(kkSwipe.clientWidth-68,e.clientX-kkSwipeStartX));
+ kkThumb.style.transform=`translateX(${kkSwipeMoved}px)`;
+});
+kkSwipe.addEventListener('pointerup',e=>{
+ if(kkSwipeStartX===null)return;
+ const shouldAnswer=kkSwipeMoved>Math.min(100,(kkSwipe.clientWidth-68)*.5);
+ kkSwipeStartX=null;kkSwipeMoved=0;kkThumb.style.transform='';
+ if(shouldAnswer)kkAnswerIncoming();
+});
+kkSwipe.addEventListener('pointercancel',()=>{kkSwipeStartX=null;kkThumb.style.transform=''});
+// Also support a click for keyboard and desktop testing.
+kkSwipe.addEventListener('click',e=>{if(e.detail===0)kkAnswerIncoming()});
 </script>
 </body></html>
