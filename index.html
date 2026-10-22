@@ -172,7 +172,19 @@
 #messagesApp .m-thread-head-spacer{height:10px}
 @media(max-height:690px){#messagesApp .m-thread-header{height:120px}#messagesApp .m-thread-avatar{width:50px;height:50px}#messagesApp .m-thread-scroll{top:170px}}
 </style>
-</head>
+<style id="v13-photos-css">
+#photosApp{position:absolute;inset:0;z-index:7;display:none;background:#fff;color:#101010;overflow:hidden;font-family:-apple-system,BlinkMacSystemFont,"Apple SD Gothic Neo",sans-serif}#photosApp.active{display:block}
+#photosApp .ph-scroll{position:absolute;inset:0 0 91px;overflow-y:auto;overscroll-behavior:contain;scrollbar-width:none}#photosApp .ph-scroll::-webkit-scrollbar{display:none}
+#photosApp .ph-hero{position:relative;height:185px;display:flex;align-items:flex-end;padding:0 15px 18px;box-sizing:border-box;background:#fff}
+#photosApp .ph-hero h1{font-size:34px;font-weight:760;letter-spacing:-1.3px;margin:0;line-height:1.1}#photosApp .ph-count{font-size:16px;font-weight:650;margin-top:6px}
+#photosApp .ph-actions{position:absolute;right:15px;bottom:20px;display:flex;gap:10px}#photosApp .ph-round{height:43px;border-radius:26px;border:1px solid #dadadd;background:#f8f8f9dd;box-shadow:inset 0 1px #fff;display:grid;place-items:center;padding:0 15px;color:#161616;font-size:16px;font-weight:600}#photosApp .ph-round.ph-filter{width:44px;padding:0}#photosApp .ph-round svg{height:23px;width:23px;stroke:currentColor;fill:none;stroke-width:2.1;stroke-linecap:round}
+#photosApp .ph-grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:2px;background:#fff}#photosApp .ph-cell{width:100%;aspect-ratio:1/1;overflow:hidden;background:#e9e9ec}#photosApp .ph-cell img{width:100%;height:100%;object-fit:cover;display:block}
+#photosApp .ph-empty{padding:45px 25px;text-align:center;color:#8e8e93;font-size:15px;line-height:1.6}
+#photosApp .ph-nav{position:absolute;bottom:19px;left:14px;right:14px;height:60px;display:flex;gap:9px;align-items:center;justify-content:space-between;pointer-events:none}#photosApp .ph-tabs{pointer-events:auto;display:flex;align-items:center;border:1px solid #d9d9df;background:#fffffff0;backdrop-filter:blur(18px);-webkit-backdrop-filter:blur(18px);border-radius:36px;height:58px;padding:4px;min-width:235px;box-shadow:0 1px 3px #0000000d}
+#photosApp .ph-tab{flex:1;min-width:0;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:2px;height:51px;border:0;background:none;border-radius:29px;font-size:11px;color:#151515;font-weight:500;padding:0 7px}#photosApp .ph-tab.selected{background:#e9e9ec;color:#0084ff}#photosApp .ph-tab svg{height:23px;width:25px;fill:none;stroke:currentColor;stroke-width:2.3;stroke-linecap:round;stroke-linejoin:round}
+#photosApp .ph-search{pointer-events:auto;width:59px;height:59px;border:1px solid #dadade;border-radius:50%;background:#fffffff0;display:grid;place-items:center}#photosApp .ph-search svg{width:27px;height:27px;stroke:#111;stroke-width:2.6;fill:none}
+@media(max-width:360px){#photosApp .ph-hero h1{font-size:31px}#photosApp .ph-count{font-size:14px}#photosApp .ph-actions{gap:6px}}
+</style></head>
 <body>
 <div class="phone">
 <div class="wall"></div><div class="island"></div>
@@ -200,6 +212,10 @@
   </div>
 </div>
 </section>
+<section id="photosApp" aria-label="사진 보관함">
+ <div class="ph-scroll" id="photoScroll"><div class="ph-hero"><div><h1>보관함</h1><div class="ph-count" id="photoCount">사진 불러오는 중…</div></div><div class="ph-actions"><button class="ph-round ph-filter" type="button" aria-label="필터"><svg viewBox="0 0 24 24"><path d="M3 6h18M6 12h12M9 18h6"/></svg></button><button class="ph-round" type="button">선택</button></div></div><div class="ph-grid" id="photoGrid"></div><div class="ph-empty" id="photoEmpty" hidden>아직 저장된 사진이 없어.<br>GitHub의 <strong>photos</strong> 폴더에 사진을 올려줘!</div></div>
+ <div class="ph-nav"><div class="ph-tabs"><button type="button" class="ph-tab selected"><svg viewBox="0 0 24 24"><rect x="2" y="3" width="20" height="18" rx="3"/><circle cx="8" cy="9" r="2"/><path d="m4 18 6-6 4 4 3-3 4 4"/></svg>보관함</button><button type="button" class="ph-tab"><svg viewBox="0 0 24 24"><rect x="4" y="7" width="16" height="14" rx="2"/><path d="M7 4h10M9 2h6"/></svg>모음</button></div><button type="button" class="ph-search" aria-label="검색"><svg viewBox="0 0 24 24"><circle cx="10" cy="10" r="7"/><path d="m15.5 15.5 6 6"/></svg></button></div>
+</section>
 <section id="phoneApp" aria-label="전화 앱"><div class="phead"><button class="pglass" id="pLeft">편집</button><div class="ptitle" id="pTitle">통화</div><button class="pglass" id="pRight">☷</button></div><div class="pbody" id="pBody"></div><div class="pnav" id="pNav"><div class="pnavmain"><button data-tab="recent"><span class="navico">◷</span>통화</button><button data-tab="contacts"><span class="navico">◉</span>연락처</button><button data-tab="keypad"><span class="navico">⠿</span>키패드</button></div><button class="psearch" data-tab="search">⌕</button></div></section><div class="toast" id="toast"></div><div class="homebar" id="homebar"></div>
 </div>
 <script>
@@ -213,7 +229,7 @@ const keys=['1','2','3','4','5','6','7','8','9','','0','⌫'];$('keypad').innerH
 function toastMessage(message){const t=$('toast');t.textContent=message;t.style.display='block';clearTimeout(toastTimer);toastTimer=setTimeout(()=>t.style.display='none',2200)}
 $('flashlightButton').addEventListener('click',e=>{e.stopPropagation();const b=e.currentTarget;b.classList.toggle('active');b.setAttribute('aria-label',b.classList.contains('active')?'손전등 끄기':'손전등 켜기');toastMessage(b.classList.contains('active')?'손전등 켜짐 (화면 연출)':'손전등 꺼짐')});
 $('cameraButton').addEventListener('click',e=>{e.stopPropagation();toastMessage('카메라 화면은 다음 단계에서 구현할 예정이야!')});
-$('lock').addEventListener('click',e=>{if(e.target.closest('.lockbottom'))return;show('pass')});let touchStart=0;$('lock').addEventListener('touchstart',e=>touchStart=e.touches[0].clientY,{passive:true});$('lock').addEventListener('touchend',e=>{if(touchStart-e.changedTouches[0].clientY>35)show('pass')},{passive:true});$('lockButton').onclick=()=>show('lock');$('homebar').onclick=()=>{if(current==='phone'){closePhone();}else if(current==='messages'){if(activeMessageThread!==null)closeMessageThread();else closeMessages();}else if(current==='home')show('lock');else if(current==='lock')show('pass');else show('lock')};
+$('lock').addEventListener('click',e=>{if(e.target.closest('.lockbottom'))return;show('pass')});let touchStart=0;$('lock').addEventListener('touchstart',e=>touchStart=e.touches[0].clientY,{passive:true});$('lock').addEventListener('touchend',e=>{if(touchStart-e.changedTouches[0].clientY>35)show('pass')},{passive:true});$('lockButton').onclick=()=>show('lock');$('homebar').onclick=()=>{if(current==='photos'){closePhotos();}else if(current==='phone'){closePhone();}else if(current==='messages'){if(activeMessageThread!==null)closeMessageThread();else closeMessages();}else if(current==='home')show('lock');else if(current==='lock')show('pass');else show('lock')};
 const iconSVG={
 '설정':'<g fill="none" stroke="#6a6e75" stroke-width="7"><circle cx="32" cy="32" r="15"/><circle cx="32" cy="32" r="7" fill="#8b9099" stroke="none"/></g><path fill="#777c85" d="M27 5h10l2 7 6 3 7-3 7 8-4 6 1 7 6 5-4 10-8-1-5 5-1 8H27l-2-8-6-4-8 1-4-10 6-5 1-7-4-6 7-8 7 3 6-3z" fill-rule="evenodd" opacity=".8"/><circle cx="32" cy="32" r="12" fill="#d9dce1"/><circle cx="32" cy="32" r="6" fill="#707780"/>',
 '날씨':'<circle cx="39" cy="22" r="12" fill="#ffd343"/><path d="M16 46h33a11 11 0 0 0-3-21 17 17 0 0 0-31 6A8 8 0 0 0 16 46" fill="#fff"/>',
@@ -233,7 +249,7 @@ const apps=['설정','날씨','카메라','캘린더','알람','FaceTime','Safar
 const dock=['전화','메시지','카카오톡','갤러리'];
 const colors={'설정':'#d9dce2','날씨':'linear-gradient(#167cde,#78c9f5)','카메라':'linear-gradient(#eef0f3,#b6bac1)','캘린더':'#fff','알람':'#fff','FaceTime':'#35c85d','Safari':'#fff','메일':'#2189ed','메모':'#fff','Instagram':'#fff','전화':'#35c95d','메시지':'#43ca62','카카오톡':'#fee500','갤러리':'#fff'};
 const customIcons={'전화':'phone.png','메시지':'messages.png','카카오톡':'kakao.png','갤러리':'photos.png','메일':'mail.png','Instagram':'instagram.png','설정':'settings.png','날씨':'weather.png','Safari':'safari.png'};
-function makeApp(name){const b=document.createElement('button');b.className='app';b.setAttribute('aria-label',name);const icon=document.createElement('span');icon.className='appicon';icon.style.background=colors[name];if(customIcons[name]){const img=document.createElement("img");img.src="icons/"+customIcons[name];img.alt="";icon.appendChild(img)}else{icon.innerHTML=`<svg viewBox="0 0 64 64" aria-hidden="true" focusable="false">${iconSVG[name]}</svg>`;}const label=document.createElement('span');label.textContent=name;b.append(icon,label);b.onclick=()=>{if(name==='전화'){openPhone();return;}if(name==='메시지'){openMessages();return;}const t=$('toast');t.textContent=`${name} 앱은 다음 단계에서 구현할 예정이야!`;t.style.display='block';clearTimeout(toastTimer);toastTimer=setTimeout(()=>t.style.display='none',2400)};return b}
+function makeApp(name){const b=document.createElement('button');b.className='app';b.setAttribute('aria-label',name);const icon=document.createElement('span');icon.className='appicon';icon.style.background=colors[name];if(customIcons[name]){const img=document.createElement("img");img.src="icons/"+customIcons[name];img.alt="";icon.appendChild(img)}else{icon.innerHTML=`<svg viewBox="0 0 64 64" aria-hidden="true" focusable="false">${iconSVG[name]}</svg>`;}const label=document.createElement('span');label.textContent=name;b.append(icon,label);b.onclick=()=>{if(name==='전화'){openPhone();return;}if(name==='메시지'){openMessages();return;}if(name==='갤러리'){openPhotos();return;}const t=$('toast');t.textContent=`${name} 앱은 다음 단계에서 구현할 예정이야!`;t.style.display='block';clearTimeout(toastTimer);toastTimer=setTimeout(()=>t.style.display='none',2400)};return b}
 apps.forEach(a=>$('apps').appendChild(makeApp(a)));dock.forEach(a=>$('dock').appendChild(makeApp(a)));
 function clock(){const d=new Date(),hm=d.toLocaleTimeString('en-GB',{hour:'2-digit',minute:'2-digit'}),date=d.toLocaleDateString('ko-KR',{month:'long',day:'numeric',weekday:'long'});const st=$('statusTime');if(st)st.textContent=hm;$('lockTime').textContent=hm;$('lockDate').textContent=date;$('widgetDay').textContent=d.getDate();$('widgetDate').textContent=d.toLocaleDateString('ko-KR',{weekday:'long'});const cd=document.getElementById('calendarIconDay');if(cd)cd.textContent=d.getDate()}clock();setInterval(clock,15000);updateDots();
 
@@ -444,5 +460,55 @@ function closeMessages(){
  document.querySelector('.island').classList.remove('inphone');current='home';
 }
 
+
+/* V13 Photos: public GitHub repository folder auto-discovery. */
+const PHOTO_REPO='duckhwayoo/Cheat_iPhone';
+const PHOTO_FOLDER='photos';
+const PHOTO_EXT=/\.(?:png|jpe?g|webp|gif|avif)$/i;
+let photosLoadSerial=0;
+async function loadPhotos(){
+ const serial=++photosLoadSerial;
+ const count=$('photoCount'),grid=$('photoGrid'),empty=$('photoEmpty');
+ count.textContent='사진 불러오는 중…';grid.innerHTML='';empty.hidden=true;
+ try{
+  const api=`https://api.github.com/repos/${PHOTO_REPO}/contents/${PHOTO_FOLDER}?ref=main`;
+  const res=await fetch(api,{cache:'no-store',headers:{'Accept':'application/vnd.github+json'}});
+  if(!res.ok){if(res.status===404)throw new Error('folder');throw new Error('api')}
+  const files=await res.json();
+  if(serial!==photosLoadSerial||current!=='photos')return;
+  const images=Array.isArray(files)?files.filter(f=>f.type==='file'&&PHOTO_EXT.test(f.name)).sort((a,b)=>a.name.localeCompare(b.name,undefined,{numeric:true})):[];
+  count.textContent=images.length.toLocaleString('ko-KR')+'개의 항목';
+  if(!images.length){empty.hidden=false;return}
+  const fragment=document.createDocumentFragment();
+  for(const file of images){
+   const cell=document.createElement('div');cell.className='ph-cell';
+   const img=document.createElement('img');img.alt='';img.loading='lazy';img.decoding='async';
+   img.src=`${PHOTO_FOLDER}/${encodeURIComponent(file.name)}`;
+   img.onerror=()=>{cell.style.background='#e9e9ec';img.style.display='none'};
+   cell.appendChild(img);fragment.appendChild(cell);
+  }
+  grid.appendChild(fragment);
+ }catch(err){
+  if(serial!==photosLoadSerial||current!=='photos')return;
+  count.textContent='0개의 항목';
+  empty.hidden=false;
+  empty.innerHTML=err.message==='folder'?'GitHub 저장소에 <strong>photos</strong> 폴더를 만들고<br>사진을 업로드하면 여기에 표시돼!':'사진 목록을 불러오지 못했어.<br>인터넷 연결을 확인하고 다시 열어줘.';
+ }
+}
+function openPhotos(){
+ show('home');current='photos';$('photosApp').classList.add('active');
+ $('homebar').style.background='#111';$('homebar').style.zIndex='12';
+ const status=document.querySelector('.status');status.classList.add('inphone');status.style.color='#000';
+ status.querySelector('.status-right')?.style.setProperty('filter','brightness(0)');
+ document.querySelector('.island').classList.add('inphone');
+ $('photoScroll').scrollTop=0;loadPhotos();
+}
+function closePhotos(){
+ ++photosLoadSerial;$('photosApp').classList.remove('active');
+ $('homebar').style.background='white';$('homebar').style.zIndex='8';
+ const status=document.querySelector('.status');status.classList.remove('inphone');status.style.color='';
+ status.querySelector('.status-right')?.style.removeProperty('filter');
+ document.querySelector('.island').classList.remove('inphone');current='home';
+}
 </script>
 </body></html>
